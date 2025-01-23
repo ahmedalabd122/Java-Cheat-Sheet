@@ -24,6 +24,11 @@ public class Main {
         scanInputPrintOutput();
         // control Flow Statements (Conditional Statements) (Selection Statements)
         selectionStatements();
+        // control Flow Statements (Looping Statements) (Iteration Statements) (repetition statements)
+        loopingStatements();
+        // methods - functions
+        methods();
+
     }
 
     public static void dataTypes() {
@@ -195,7 +200,7 @@ public class Main {
                 arr[i][j] = in.nextInt();
             }
         }
-        in.close(); // close the scanner
+        // in.close(); // close the scanner
 
         // print formating %d => integer, %f => float, %s => strin
         // %.2f => float with 2 decimal points
@@ -280,7 +285,181 @@ public class Main {
                 System.out.println("Invalid day");
         }
 
-        
+    }
+
+    private static void loopingStatements() {
+        // control Flow Statements (Looping Statements) (Iteration Statements) (repetition statements)
+        // while loop
+        int i = 0;
+        while (i < 5) {
+            System.out.println(i);
+            i++;
+        }
+
+        // Sentinel-controlled loop => loop that runs until a specific value is entered
+        char ch = 'y';
+        Scanner in = new Scanner(System.in);
+        while (ch != 'q') {
+            ch = in.next().charAt(0);
+        }
+
+        // Flag-controlled loop => loop that runs until a specific condition is met
+        boolean flag = true;
+        while (flag) {
+            // do something
+            flag = false;
+            if (flag == true) {
+                continue; // skip the current iteration
+
+                        }
+            // in.close();
+        }
+
+        // do while loop: the loop will run at least once
+        int j = 0;
+        do {
+            System.out.println(j);
+            j++;
+        } while (j < 5);
+
+        // for loop => for(initialization; condition; increment/decrement)
+        for (int k = 0; k < 5; k++) {
+            System.out.println(k);
+        }
+        // multi variable for loop
+        for (int k = 0, l = 5; k < 5 && l > 0; k++, l--) {
+            System.out.println(k + " " + l);
+        }
+
+        // for each loop => for(dataType variableName : arrayName)
+        int[] arr = {1, 2, 3, 4, 5};
+        for (int l : arr) {
+            System.out.println(l);
+        }
+
+        // break statement => used to exit the loop immediately
+        for (int m = 0; m < 5; m++) {
+            if (m == 3) {
+                break;
+            }
+            System.out.println(m);
+        }
+
+        // continue statement => used to skip the current iteration but will continue the loop
+        for (int n = 0; n < 5; n++) {
+            if (n == 3) {
+                continue;
+            }
+            System.out.println(n);
+        }
+
+        // nested loops
+        for (int o = 0; o < 5; o++) {
+            for (int p = 0; p < 5; p++) {
+                System.out.println(o + " " + p);
+            }
+        }
+
+        // labeled loops and break statement by label
+        outer:
+        for (int q = 0; q < 12; q++) {
+            inner:
+            for (int r = 0; r < q; r++) {
+                if (r == 5 && q == 5) {
+                    break inner;
+                }
+                if (r == 3 && q == 12) {
+                    break outer;
+                }
+                System.out.println(q + " " + r);
+            }
+        }
+
+    }
+
+    private static void methods() {
+        // methods - functions
+        // method signature => access modifier, return type, method name, parameters, exceptions
+        // access modifier => public, private, protected, default
+        // return type => data type of the value returned by the method
+        // method name => name of the method
+        // parameters => data type and name of the parameters
+        // exceptions => exceptions thrown by the method
+        // method body => code inside the method
+        // method call => calling the method to execute the code inside the method
+
+        // method declaration
+        private void printHello() {
+            System.out.println("Hello, World!");
+        }
+
+        // method call
+        printHello();
+
+        // method with parameters
+        public void printMessage(String message) {
+            System.out.println(message);
+        }
+
+        // method call
+        printMessage("Hello, World!");
+
+        // method with return type
+        public int add(int a, int b) {
+            return a + b;
+        }
+
+        // method call
+        int sum = add(10, 20);
+        System.out.println(sum);
+
+        // method with multiple parameters
+        public int multiply(int a, int b, int c) {
+            return a * b * c;
+        }
+
+        // method call
+        int product = multiply(2, 3, 4);
+        System.out.println(product);
+
+        // method with return type and parameters
+        public int subtract(int a, int b) {
+            return a - b;
+        }
+
+        // method call
+        int difference = subtract(20, 10);
+        System.out.println(difference);
+
+        // method with multiple return statements
+        public int max(int a, int b) {
+            if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+
+        // method call
+        int maximum = max(10, 20);
+        System.out.println(maximum);
+
+        // method with multiple parameters and return type
+        public int min(int a, int b, int c) {
+            if (a < b && a < c) {
+                return a;
+            } else if (b < a && b < c) {
+                return b;
+            } else {
+                return c;
+            }
+        }
+
+        // method call
+        int minimum = min(10, 20, 5);
+        System.out.println(minimum);
+
+        // method with
     }
 
 }
