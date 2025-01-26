@@ -1,8 +1,6 @@
 package com.example;
 
-
 // import  java.lang.Math;
-
 // You can import a specific method from a class by using the following syntax:
 import static java.lang.Math.abs;
 
@@ -22,16 +20,15 @@ public class MethodsAndFunctions {
 
     // printHello(); // This will cause an error because the printHello function is not called from within another function.
     // To call the printHello function, you need to call it from within the main function.
-
-    static int min(int a, int b, int c){
-        int min =a; 
-        if(a<b && a<c){
+    static int min(int a, int b, int c) {
+        int min = a;
+        if (a < b && a < c) {
             min = a;
             return min;
-        }else if(b<a && b<c){
+        } else if (b < a && b < c) {
             min = b;
             return min;
-        }else{
+        } else {
             min = c;
             return min;
         }
@@ -50,9 +47,8 @@ public class MethodsAndFunctions {
 
     // The main function is the entry point of a Java program.
     // The main function must be defined with the following signature:
-    public static void main(String[] args){
-        int a = sum(1,2,3,4,5);
-
+    public static void main(String[] args) {
+        int a = sum(1, 2, 3, 4, 5);
 
         // built in methods in Java
         // The Math class in Java provides a set of built-in methods for performing mathematical operations.
@@ -61,8 +57,13 @@ public class MethodsAndFunctions {
         Math.abs(a);
         // or I can import the method only and use it like this import static java.lang.Math.abs;
         abs(a);
-    }
 
+        // you can call the add method with different parameters and the compiler will choose the correct method based on the parameters you provide.
+        // calling the add method that accepting 2 integers and return an integer
+        add(1, 2);
+        // calling the add method that accepting 2 doubles and an integer number and return a double
+        add(1.0, 2.0, 3);
+    }
 
     // method overloading
     // You can define multiple functions with the same name but different parameter lists. This is called method overloading.
@@ -71,14 +72,36 @@ public class MethodsAndFunctions {
     // the number of input parameters or type of input parameters or both.
     // Overloading is related to compile-time (or static) polymorphism.
     // The following example defines two functions with the same name but different parameter lists:
-    
     static int add(int a, int b) {
         return a + b;
     }
 
-    static double add(double a, double b , int c) {
-        return a + b;
+    static double add(double a, double b, int c) {
+        int x = add((int) a, (int) b);
+        return x + c;
     }
 
 
+    // recursion in Java
+    // Recursion is a technique in which a function calls itself to solve a problem.
+    // Recursion is useful for solving problems that can be broken down into smaller, similar subproblems.
+    // The following example defines a recursive function that calculates the factorial of a number:
+    static int factorial(int n) {
+        if (n == 0) { // base case to stop the recursion
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    // fibonacci series
+    // The Fibonacci series is a sequence of numbers in which each number is the sum of the two preceding ones.
+    // The following example defines a recursive function that calculates the nth number in the Fibonacci series:
+    static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
 }

@@ -6,32 +6,64 @@ This repository is for learning Java coding. It contains common syntax and expla
 
 ### Files Structure
 
-- `Main.java` - Contains the main program and examples
-- `MethodsAndFunctions.java` - Contains methods and functions examples
-- `ArrayInJava.java` - Contains examples and explanations on how to work with arrays in Java, including declaration, initialization, and common operations.
+- `Main.java` - Contains the main program and fundamental Java concepts
+- `MethodsAndFunctions.java` - Contains methods, functions, and recursion examples
+- `ArrayInJava.java` - Contains array operations and manipulations
+- `ArrayString.java` - Contains String operations and methods
+- `oop/` - Contains Object-Oriented Programming concepts
+  - `Car.java` - Demonstrates encapsulation, constructors, and singleton pattern
+  - `Student.java` - Shows static members and password validation
+  - `Account.java` - Banking account example with data hiding
+  - `OOP.java` - Main OOP concepts demonstration
+  - `OuterClass.java` - Demonstrates nested classes
 
 ### Topics Covered
 
-- Primitive data types
-- Declarative data types (Arrays, Lists, Sets, Maps, Queues, Stacks)
-- Basic operators and expressions
-  - Arithmetic operators
-  - Relational operators
-  - Logical operators
-- Scanner input and output
-- Control flow statements
-  - Conditional statements (if, if-else, switch)
-  - Looping statements (while, do-while, for, for-each)
-  - Break and continue statements
-  - Labeled loops
-- Methods and Functions
-  - Method declaration and calling
-  - Static methods
-  - Parameters and return types
-  - Method overloading
+1. Primitive Data Types
+
+   - Integer types (byte, short, int, long)
+   - Floating-point types (float, double)
+   - Character type (char)
+   - Boolean type (boolean)
+
+2. Object-Oriented Programming
+
+   - Classes and Objects
+   - Constructors and Methods
+   - Encapsulation and Data Hiding
+   - Static Members
+   - Inner Classes
+   - Singleton Pattern
+
+3. Arrays and Strings
+
+   - Array Declaration and Initialization
+   - Multi-dimensional Arrays
+   - String Operations and Methods
+   - String Manipulation
+
+4. Control Flow
+
+   - Conditional Statements (if, if-else, switch)
+   - Loops (while, do-while, for, for-each)
+   - Break and Continue
+   - Labeled Statements
+
+5. Methods and Functions
+
+   - Method Declaration and Calling
+   - Static Methods
+   - Method Overloading
+   - Recursion
+   - Variable Arguments
+
+6. Input/Output
+   - Scanner Class
+   - Console Input/Output
+   - Formatting Output
 
 ## Package Structure
 
-The project uses the `com.example` package structure following Java conventions.
+The project uses the `com.example` package structure following Java conventions, with sub-packages for specific concepts like OOP.
 
 Feel free to explore the code and use it as a reference for your Java learning journey.

@@ -1,3 +1,8 @@
+// package name should be in lowercase and should be the first line in the file
+// package com.example;
+// package is used to define a group of classes, interfaces, enumerations, and annotations in the same folder structure so they can call with each others.
+// package is used to prevent naming conflicts, to control access, to make searching/locating and usage of classes, interfaces, enumerations, and annotations easier.
+// package com.example; => the package name is com.example
 package com.example;
 
 import java.util.ArrayList;
@@ -27,7 +32,10 @@ public class Main {
         // control Flow Statements (Looping Statements) (Iteration Statements) (repetition statements)
         loopingStatements();
         // methods - functions
-        methods();
+        // calling the static method from the class MethodsAndFunctions
+        MethodsAndFunctions.min(1, 2, 3);
+        MethodsAndFunctions obj = new MethodsAndFunctions(); // creating an object of the class MethodsAndFunctions
+        obj.printHello(); // calling the printHello method from the object obj because it's not static
 
     }
 
@@ -311,7 +319,7 @@ public class Main {
             if (flag == true) {
                 continue; // skip the current iteration
 
-                        }
+            }
             // in.close();
         }
 
@@ -375,91 +383,6 @@ public class Main {
             }
         }
 
-    }
-
-    private static void methods() {
-        // methods - functions
-        // method signature => access modifier, return type, method name, parameters, exceptions
-        // access modifier => public, private, protected, default
-        // return type => data type of the value returned by the method
-        // method name => name of the method
-        // parameters => data type and name of the parameters
-        // exceptions => exceptions thrown by the method
-        // method body => code inside the method
-        // method call => calling the method to execute the code inside the method
-
-        // method declaration
-        private void printHello() {
-            System.out.println("Hello, World!");
-        }
-
-        // method call
-        printHello();
-
-        // method with parameters
-        public void printMessage(String message) {
-            System.out.println(message);
-        }
-
-        // method call
-        printMessage("Hello, World!");
-
-        // method with return type
-        public int add(int a, int b) {
-            return a + b;
-        }
-
-        // method call
-        int sum = add(10, 20);
-        System.out.println(sum);
-
-        // method with multiple parameters
-        public int multiply(int a, int b, int c) {
-            return a * b * c;
-        }
-
-        // method call
-        int product = multiply(2, 3, 4);
-        System.out.println(product);
-
-        // method with return type and parameters
-        public int subtract(int a, int b) {
-            return a - b;
-        }
-
-        // method call
-        int difference = subtract(20, 10);
-        System.out.println(difference);
-
-        // method with multiple return statements
-        public int max(int a, int b) {
-            if (a > b) {
-                return a;
-            } else {
-                return b;
-            }
-        }
-
-        // method call
-        int maximum = max(10, 20);
-        System.out.println(maximum);
-
-        // method with multiple parameters and return type
-        public int min(int a, int b, int c) {
-            if (a < b && a < c) {
-                return a;
-            } else if (b < a && b < c) {
-                return b;
-            } else {
-                return c;
-            }
-        }
-
-        // method call
-        int minimum = min(10, 20, 5);
-        System.out.println(minimum);
-
-        // method with
     }
 
 }
